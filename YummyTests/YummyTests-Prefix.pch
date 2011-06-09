@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'YummyTests' target in the 'YummyTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif

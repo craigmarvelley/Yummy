@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4407217113A13AC6002C8B08 /* RootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4407217013A13AC6002C8B08 /* RootView.xib */; };
+		44193ECA13A133A90025300D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44193EC913A133A90025300D /* UIKit.framework */; };
+		44193ECC13A133A90025300D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44193ECB13A133A90025300D /* Foundation.framework */; };
+		44193ECE13A133A90025300D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44193ECD13A133A90025300D /* CoreGraphics.framework */; };
+		44193ED413A133A90025300D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44193ED213A133A90025300D /* InfoPlist.strings */; };
+		44193ED713A133A90025300D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44193ED613A133A90025300D /* main.m */; };
+		44193EDA13A133A90025300D /* YummyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44193ED913A133A90025300D /* YummyAppDelegate.m */; };
+		44193EDD13A133A90025300D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44193EDB13A133A90025300D /* MainWindow.xib */; };
+		44193EE613A133A90025300D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44193EE513A133A90025300D /* RootViewController.m */; };
+		44193EED13A133AA0025300D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44193EC913A133A90025300D /* UIKit.framework */; };
+		44193EEE13A133AA0025300D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44193ECB13A133A90025300D /* Foundation.framework */; };
+		44193EEF13A133AA0025300D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44193ECD13A133A90025300D /* CoreGraphics.framework */; };
+		44193EF713A133AA0025300D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44193EF513A133AA0025300D /* InfoPlist.strings */; };
+		44193EFA13A133AA0025300D /* YummyTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 44193EF913A133AA0025300D /* YummyTests.h */; };
+		44193EFC13A133AA0025300D /* YummyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44193EFB13A133AA0025300D /* YummyTests.m */; };
+		44193F0913A134620025300D /* PopularBookmarksController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44193F0613A134620025300D /* PopularBookmarksController.m */; };
+		44193F0A13A134620025300D /* RecentBookmarksController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44193F0813A134620025300D /* RecentBookmarksController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44193EF013A133AA0025300D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44193EBC13A133A90025300D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44193EC413A133A90025300D;
+			remoteInfo = Yummy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4407217013A13AC6002C8B08 /* RootView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootView.xib; sourceTree = "<group>"; };
+		44193EC513A133A90025300D /* Yummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44193EC913A133A90025300D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		44193ECB13A133A90025300D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		44193ECD13A133A90025300D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		44193ED113A133A90025300D /* Yummy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Yummy-Info.plist"; sourceTree = "<group>"; };
+		44193ED313A133A90025300D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		44193ED513A133A90025300D /* Yummy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yummy-Prefix.pch"; sourceTree = "<group>"; };
+		44193ED613A133A90025300D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		44193ED813A133A90025300D /* YummyAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YummyAppDelegate.h; sourceTree = "<group>"; };
+		44193ED913A133A90025300D /* YummyAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YummyAppDelegate.m; sourceTree = "<group>"; };
+		44193EDC13A133A90025300D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		44193EE413A133A90025300D /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		44193EE513A133A90025300D /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		44193EEC13A133AA0025300D /* YummyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YummyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44193EF413A133AA0025300D /* YummyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YummyTests-Info.plist"; sourceTree = "<group>"; };
+		44193EF613A133AA0025300D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		44193EF813A133AA0025300D /* YummyTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YummyTests-Prefix.pch"; sourceTree = "<group>"; };
+		44193EF913A133AA0025300D /* YummyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YummyTests.h; sourceTree = "<group>"; };
+		44193EFB13A133AA0025300D /* YummyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YummyTests.m; sourceTree = "<group>"; };
+		44193F0513A134620025300D /* PopularBookmarksController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularBookmarksController.h; sourceTree = "<group>"; };
+		44193F0613A134620025300D /* PopularBookmarksController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularBookmarksController.m; sourceTree = "<group>"; };
+		44193F0713A134620025300D /* RecentBookmarksController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentBookmarksController.h; sourceTree = "<group>"; };
+		44193F0813A134620025300D /* RecentBookmarksController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentBookmarksController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44193EC213A133A90025300D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44193ECA13A133A90025300D /* UIKit.framework in Frameworks */,
+				44193ECC13A133A90025300D /* Foundation.framework in Frameworks */,
+				44193ECE13A133A90025300D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44193EE813A133AA0025300D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44193EED13A133AA0025300D /* UIKit.framework in Frameworks */,
+				44193EEE13A133AA0025300D /* Foundation.framework in Frameworks */,
+				44193EEF13A133AA0025300D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44193EBA13A133A90025300D = {
+			isa = PBXGroup;
+			children = (
+				44193ECF13A133A90025300D /* Yummy */,
+				44193EF213A133AA0025300D /* YummyTests */,
+				44193EC813A133A90025300D /* Frameworks */,
+				44193EC613A133A90025300D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		44193EC613A133A90025300D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44193EC513A133A90025300D /* Yummy.app */,
+				44193EEC13A133AA0025300D /* YummyTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44193EC813A133A90025300D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44193EC913A133A90025300D /* UIKit.framework */,
+				44193ECB13A133A90025300D /* Foundation.framework */,
+				44193ECD13A133A90025300D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		44193ECF13A133A90025300D /* Yummy */ = {
+			isa = PBXGroup;
+			children = (
+				44193F0513A134620025300D /* PopularBookmarksController.h */,
+				44193F0613A134620025300D /* PopularBookmarksController.m */,
+				44193F0713A134620025300D /* RecentBookmarksController.h */,
+				44193F0813A134620025300D /* RecentBookmarksController.m */,
+				44193ED813A133A90025300D /* YummyAppDelegate.h */,
+				44193ED913A133A90025300D /* YummyAppDelegate.m */,
+				44193EDB13A133A90025300D /* MainWindow.xib */,
+				44193EE413A133A90025300D /* RootViewController.h */,
+				44193EE513A133A90025300D /* RootViewController.m */,
+				4407217013A13AC6002C8B08 /* RootView.xib */,
+				44193ED013A133A90025300D /* Supporting Files */,
+			);
+			path = Yummy;
+			sourceTree = "<group>";
+		};
+		44193ED013A133A90025300D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				44193ED113A133A90025300D /* Yummy-Info.plist */,
+				44193ED213A133A90025300D /* InfoPlist.strings */,
+				44193ED513A133A90025300D /* Yummy-Prefix.pch */,
+				44193ED613A133A90025300D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		44193EF213A133AA0025300D /* YummyTests */ = {
+			isa = PBXGroup;
+			children = (
+				44193EF913A133AA0025300D /* YummyTests.h */,
+				44193EFB13A133AA0025300D /* YummyTests.m */,
+				44193EF313A133AA0025300D /* Supporting Files */,
+			);
+			path = YummyTests;
+			sourceTree = "<group>";
+		};
+		44193EF313A133AA0025300D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				44193EF413A133AA0025300D /* YummyTests-Info.plist */,
+				44193EF513A133AA0025300D /* InfoPlist.strings */,
+				44193EF813A133AA0025300D /* YummyTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		44193EC413A133A90025300D /* Yummy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44193EFF13A133AA0025300D /* Build configuration list for PBXNativeTarget "Yummy" */;
+			buildPhases = (
+				44193EC113A133A90025300D /* Sources */,
+				44193EC213A133A90025300D /* Frameworks */,
+				44193EC313A133A90025300D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Yummy;
+			productName = Yummy;
+			productReference = 44193EC513A133A90025300D /* Yummy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		44193EEB13A133AA0025300D /* YummyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44193F0213A133AA0025300D /* Build configuration list for PBXNativeTarget "YummyTests" */;
+			buildPhases = (
+				44193EE713A133AA0025300D /* Sources */,
+				44193EE813A133AA0025300D /* Frameworks */,
+				44193EE913A133AA0025300D /* Resources */,
+				44193EEA13A133AA0025300D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44193EF113A133AA0025300D /* PBXTargetDependency */,
+			);
+			name = YummyTests;
+			productName = YummyTests;
+			productReference = 44193EEC13A133AA0025300D /* YummyTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44193EBC13A133A90025300D /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 44193EBF13A133A90025300D /* Build configuration list for PBXProject "Yummy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 44193EBA13A133A90025300D;
+			productRefGroup = 44193EC613A133A90025300D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				44193EC413A133A90025300D /* Yummy */,
+				44193EEB13A133AA0025300D /* YummyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44193EC313A133A90025300D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44193ED413A133A90025300D /* InfoPlist.strings in Resources */,
+				44193EDD13A133A90025300D /* MainWindow.xib in Resources */,
+				4407217113A13AC6002C8B08 /* RootView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44193EE913A133AA0025300D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44193EF713A133AA0025300D /* InfoPlist.strings in Resources */,
+				44193EFA13A133AA0025300D /* YummyTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44193EEA13A133AA0025300D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44193EC113A133A90025300D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44193ED713A133A90025300D /* main.m in Sources */,
+				44193EDA13A133A90025300D /* YummyAppDelegate.m in Sources */,
+				44193EE613A133A90025300D /* RootViewController.m in Sources */,
+				44193F0913A134620025300D /* PopularBookmarksController.m in Sources */,
+				44193F0A13A134620025300D /* RecentBookmarksController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44193EE713A133AA0025300D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44193EFC13A133AA0025300D /* YummyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44193EF113A133AA0025300D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44193EC413A133A90025300D /* Yummy */;
+			targetProxy = 44193EF013A133AA0025300D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		44193ED213A133A90025300D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44193ED313A133A90025300D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		44193EDB13A133A90025300D /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44193EDC13A133A90025300D /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		44193EF513A133AA0025300D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44193EF613A133AA0025300D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		44193EFD13A133AA0025300D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		44193EFE13A133AA0025300D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		44193F0013A133AA0025300D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Yummy/Yummy-Prefix.pch";
+				INFOPLIST_FILE = "Yummy/Yummy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		44193F0113A133AA0025300D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Yummy/Yummy-Prefix.pch";
+				INFOPLIST_FILE = "Yummy/Yummy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		44193F0313A133AA0025300D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Yummy.app/Yummy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YummyTests/YummyTests-Prefix.pch";
+				INFOPLIST_FILE = "YummyTests/YummyTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		44193F0413A133AA0025300D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Yummy.app/Yummy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YummyTests/YummyTests-Prefix.pch";
+				INFOPLIST_FILE = "YummyTests/YummyTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44193EBF13A133A90025300D /* Build configuration list for PBXProject "Yummy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44193EFD13A133AA0025300D /* Debug */,
+				44193EFE13A133AA0025300D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44193EFF13A133AA0025300D /* Build configuration list for PBXNativeTarget "Yummy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44193F0013A133AA0025300D /* Debug */,
+				44193F0113A133AA0025300D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44193F0213A133AA0025300D /* Build configuration list for PBXNativeTarget "YummyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44193F0313A133AA0025300D /* Debug */,
+				44193F0413A133AA0025300D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 44193EBC13A133A90025300D /* Project object */;
+}
