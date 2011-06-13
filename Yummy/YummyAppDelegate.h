@@ -18,7 +18,7 @@
     UISplitViewController *splitViewController;
     
     RootViewController *rootViewController;
-    RecentBookmarksController *RecentBookmarksController;
+    RecentBookmarksController *recentBookmarksController;
 	UIBarButtonItem *rootPopoverButtonItem;
     
 }
@@ -27,7 +27,7 @@
 
 @property (nonatomic, retain)  UISplitViewController *splitViewController;
 @property (nonatomic, retain)  RootViewController *rootViewController;
-@property (nonatomic, retain)  RecentBookmarksController *RecentBookmarksController;
+@property (nonatomic, retain)  RecentBookmarksController *recentBookmarksController;
 @property (nonatomic, assign)  UIBarButtonItem *rootPopoverButtonItem;
 
 @end

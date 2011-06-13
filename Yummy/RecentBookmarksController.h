@@ -7,18 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RestKit/RestKit.h>
 
-#import "YummyAppDelegate.h"
+#import "DetailViewController.h"
+#import "Bookmark.h"
 
-@interface RecentBookmarksController : UITableViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate> 
+@interface RecentBookmarksController : DetailViewController <UITableViewDelegate, UITableViewDataSource, RKObjectLoaderDelegate>
 {
-    UIPopoverController *popoverController;
-	YummyAppDelegate *appDelegate;
+    UITableView *_tableView;
+	NSArray *_bookmarks;
 }
-
-@property (nonatomic, assign) YummyAppDelegate *appDelegate;
-@property (nonatomic, assign) UIPopoverController *popoverController;
-
 
 @end
 

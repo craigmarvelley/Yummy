@@ -1,8 +1,8 @@
 //
-//  PopularBookmarksController.h
+//  DetailViewController.h
 //  Yummy
 //
-//  Created by Craig on 31/05/2011.
+//  Created by Craig on 12/06/2011.
 //  Copyright 2011 Box UK. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 #import "YummyAppDelegate.h"
 
-@interface PopularBookmarksController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate> 
+@interface DetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate> 
 {
     UIPopoverController *popoverController;
 	YummyAppDelegate *appDelegate;
@@ -19,6 +19,4 @@
 @property (nonatomic, assign) YummyAppDelegate *appDelegate;
 @property (nonatomic, assign) UIPopoverController *popoverController;
 
-
 @end
-
