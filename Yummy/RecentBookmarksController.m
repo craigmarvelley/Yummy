@@ -34,7 +34,7 @@
 	_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) style:UITableViewStylePlain];
 	_tableView.dataSource = self;
 	_tableView.delegate = self;	
-    _tableView.rowHeight = 64;
+    _tableView.rowHeight = 60;
 	
     self.view = _tableView;
     

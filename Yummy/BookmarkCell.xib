@@ -37,23 +37,23 @@
 				<string key="IBProxiedObjectIdentifier">IBFirstResponder</string>
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 			</object>
-			<object class="IBUITableViewCell" id="224603677">
+			<object class="IBUITableViewCell" id="399151500">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="IBUIView" id="1022688526">
-						<reference key="NSNextResponder" ref="224603677"/>
+					<object class="IBUIView" id="928079923">
+						<reference key="NSNextResponder" ref="399151500"/>
 						<int key="NSvFlags">256</int>
 						<object class="NSMutableArray" key="NSSubviews">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUILabel" id="335959109">
-								<reference key="NSNextResponder" ref="1022688526"/>
+							<object class="IBUILabel" id="650786847">
+								<reference key="NSNextResponder" ref="928079923"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{20, 6}, {728, 21}}</string>
-								<reference key="NSSuperview" ref="1022688526"/>
+								<reference key="NSSuperview" ref="928079923"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="716098786"/>
+								<reference key="NSNextKeyView" ref="115268236"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
@@ -71,11 +71,11 @@
 								<int key="IBUIBaselineAdjustment">1</int>
 								<float key="IBUIMinimumFontSize">10</float>
 							</object>
-							<object class="IBUILabel" id="716098786">
-								<reference key="NSNextResponder" ref="1022688526"/>
+							<object class="IBUILabel" id="115268236">
+								<reference key="NSNextResponder" ref="928079923"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{20, 35}, {728, 21}}</string>
-								<reference key="NSSuperview" ref="1022688526"/>
+								<string key="NSFrame">{{20, 32}, {728, 21}}</string>
+								<reference key="NSSuperview" ref="928079923"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView"/>
 								<bool key="IBUIOpaque">NO</bool>
@@ -86,7 +86,7 @@
 								<string key="IBUIText">Label</string>
 								<object class="NSFont" key="IBUIFont">
 									<string key="NSName">Helvetica</string>
-									<double key="NSSize">14</double>
+									<double key="NSSize">12</double>
 									<int key="NSfFlags">16</int>
 								</object>
 								<object class="NSColor" key="IBUITextColor">
@@ -98,10 +98,10 @@
 								<float key="IBUIMinimumFontSize">10</float>
 							</object>
 						</object>
-						<string key="NSFrameSize">{768, 64}</string>
-						<reference key="NSSuperview" ref="224603677"/>
+						<string key="NSFrameSize">{768, 60}</string>
+						<reference key="NSSuperview" ref="399151500"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="335959109"/>
+						<reference key="NSNextKeyView" ref="650786847"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MCAwAA</bytes>
@@ -113,17 +113,17 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</object>
-				<string key="NSFrameSize">{768, 64}</string>
+				<string key="NSFrameSize">{768, 60}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="1022688526"/>
+				<reference key="NSNextKeyView" ref="928079923"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
 					<bytes key="NSRGB">MSAxIDEAA</bytes>
 				</object>
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 				<int key="IBUISeparatorStyle">1</int>
-				<reference key="IBUIContentView" ref="1022688526"/>
+				<reference key="IBUIContentView" ref="928079923"/>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -132,16 +132,16 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">titleLabel</string>
-						<reference key="source" ref="224603677"/>
-						<reference key="destination" ref="335959109"/>
+						<reference key="source" ref="399151500"/>
+						<reference key="destination" ref="650786847"/>
 					</object>
 					<int key="connectionID">7</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">tagsLabel</string>
-						<reference key="source" ref="224603677"/>
-						<reference key="destination" ref="716098786"/>
+						<reference key="source" ref="399151500"/>
+						<reference key="destination" ref="115268236"/>
 					</object>
 					<int key="connectionID">8</int>
 				</object>
@@ -168,24 +168,24 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">4</int>
-						<reference key="object" ref="224603677"/>
+						<reference key="object" ref="399151500"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="335959109"/>
-							<reference ref="716098786"/>
+							<reference ref="650786847"/>
+							<reference ref="115268236"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">5</int>
-						<reference key="object" ref="335959109"/>
-						<reference key="parent" ref="224603677"/>
+						<reference key="object" ref="650786847"/>
+						<reference key="parent" ref="399151500"/>
 						<string key="objectName">Title Label</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">6</int>
-						<reference key="object" ref="716098786"/>
-						<reference key="parent" ref="224603677"/>
+						<reference key="object" ref="115268236"/>
+						<reference key="parent" ref="399151500"/>
 						<string key="objectName">Tags Label</string>
 					</object>
 				</object>
