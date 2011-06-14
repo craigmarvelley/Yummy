@@ -8,6 +8,7 @@
 
 #import "RecentBookmarksController.h"
 #import "RootViewController.h"
+#import "BookmarkCell.h"
 
 @interface RecentBookmarksController (Private)
     - (void)loadBookmarks;
@@ -33,6 +34,7 @@
 	_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) style:UITableViewStylePlain];
 	_tableView.dataSource = self;
 	_tableView.delegate = self;	
+    _tableView.rowHeight = 64;
 	
     self.view = _tableView;
     
@@ -82,15 +84,44 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-	NSString* reuseIdentifier = @"Bookmark Cell";
+	NSString* reuseIdentifier = @"BookmarkCell";
     
-	UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+	BookmarkCell *cell = (BookmarkCell *)
+        [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    
 	if (nil == cell) 
     {
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier] autorelease];
+		NSArray *topLevelObjects = [[NSBundle mainBundle]
+                                    loadNibNamed:@"BookmarkCell" owner:nil options:nil];
+        
+        for(id currentObject in topLevelObjects)
+        {
+            if([currentObject isKindOfClass:[UITableViewCell class]])
+            {
+                cell = (BookmarkCell *) currentObject;
+            }
+        }
 	}
     
-	cell.textLabel.text = [[_bookmarks objectAtIndex:indexPath.row] title];
+	cell.titleLabel.text = [[_bookmarks objectAtIndex:indexPath.row] title];
+    
+    // Add the tags in a pipe delimited list
+    NSMutableString *tagLabelText = [[NSMutableString alloc] init];
+    NSArray *tags = [[_bookmarks objectAtIndex:indexPath.row] tags];
+    
+    for(int i=0, n=[tags count]; i<n; i++)
+    {        
+        [tagLabelText appendString:[tags objectAtIndex:i]];
+        
+        if(i < [tags count] - 1)
+        {
+            [tagLabelText appendString:@" | "];
+        }
+    }
+    
+    cell.tagsLabel.text = tagLabelText;
+    
+    [tagLabelText release];
     
 	return cell;
 }

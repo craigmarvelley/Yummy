@@ -34,6 +34,8 @@
 		447CD21513A5319E00AE457C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447CD21113A5319E00AE457C /* SystemConfiguration.framework */; };
 		447CD21813A534CE00AE457C /* Bookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 447CD21713A534CE00AE457C /* Bookmark.m */; };
 		447CD21B13A53AC900AE457C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447CD21A13A53AC900AE457C /* DetailViewController.m */; };
+		44C59F7A13A7BA0C00B68DC2 /* BookmarkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C59F7813A7BA0C00B68DC2 /* BookmarkCell.m */; };
+		44C59F7B13A7BA0C00B68DC2 /* BookmarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44C59F7913A7BA0C00B68DC2 /* BookmarkCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +163,9 @@
 		447CD21913A53AC900AE457C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		447CD21A13A53AC900AE457C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		447CD27D13A56F8200AE457C /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		44C59F7713A7BA0C00B68DC2 /* BookmarkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkCell.h; sourceTree = "<group>"; };
+		44C59F7813A7BA0C00B68DC2 /* BookmarkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkCell.m; sourceTree = "<group>"; };
+		44C59F7913A7BA0C00B68DC2 /* BookmarkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +256,9 @@
 				447CD21713A534CE00AE457C /* Bookmark.m */,
 				447CD21913A53AC900AE457C /* DetailViewController.h */,
 				447CD21A13A53AC900AE457C /* DetailViewController.m */,
+				44C59F7713A7BA0C00B68DC2 /* BookmarkCell.h */,
+				44C59F7813A7BA0C00B68DC2 /* BookmarkCell.m */,
+				44C59F7913A7BA0C00B68DC2 /* BookmarkCell.xib */,
 			);
 			path = Yummy;
 			sourceTree = "<group>";
@@ -453,6 +461,7 @@
 				44193ED413A133A90025300D /* InfoPlist.strings in Resources */,
 				44193EDD13A133A90025300D /* MainWindow.xib in Resources */,
 				4407217113A13AC6002C8B08 /* RootView.xib in Resources */,
+				44C59F7B13A7BA0C00B68DC2 /* BookmarkCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +504,7 @@
 				44193F0A13A134620025300D /* RecentBookmarksController.m in Sources */,
 				447CD21813A534CE00AE457C /* Bookmark.m in Sources */,
 				447CD21B13A53AC900AE457C /* DetailViewController.m in Sources */,
+				44C59F7A13A7BA0C00B68DC2 /* BookmarkCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
