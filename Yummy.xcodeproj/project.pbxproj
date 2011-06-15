@@ -36,6 +36,8 @@
 		447CD21B13A53AC900AE457C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447CD21A13A53AC900AE457C /* DetailViewController.m */; };
 		44C59F7A13A7BA0C00B68DC2 /* BookmarkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C59F7813A7BA0C00B68DC2 /* BookmarkCell.m */; };
 		44C59F7B13A7BA0C00B68DC2 /* BookmarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44C59F7913A7BA0C00B68DC2 /* BookmarkCell.xib */; };
+		44C59F8413A921BB00B68DC2 /* BookmarkWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C59F8213A921BB00B68DC2 /* BookmarkWebViewController.m */; };
+		44C59F8513A921BB00B68DC2 /* BookmarkWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44C59F8313A921BB00B68DC2 /* BookmarkWebView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +168,9 @@
 		44C59F7713A7BA0C00B68DC2 /* BookmarkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkCell.h; sourceTree = "<group>"; };
 		44C59F7813A7BA0C00B68DC2 /* BookmarkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkCell.m; sourceTree = "<group>"; };
 		44C59F7913A7BA0C00B68DC2 /* BookmarkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkCell.xib; sourceTree = "<group>"; };
+		44C59F8113A921BB00B68DC2 /* BookmarkWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkWebViewController.h; sourceTree = "<group>"; };
+		44C59F8213A921BB00B68DC2 /* BookmarkWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkWebViewController.m; sourceTree = "<group>"; };
+		44C59F8313A921BB00B68DC2 /* BookmarkWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkWebView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +264,9 @@
 				44C59F7713A7BA0C00B68DC2 /* BookmarkCell.h */,
 				44C59F7813A7BA0C00B68DC2 /* BookmarkCell.m */,
 				44C59F7913A7BA0C00B68DC2 /* BookmarkCell.xib */,
+				44C59F8113A921BB00B68DC2 /* BookmarkWebViewController.h */,
+				44C59F8213A921BB00B68DC2 /* BookmarkWebViewController.m */,
+				44C59F8313A921BB00B68DC2 /* BookmarkWebView.xib */,
 			);
 			path = Yummy;
 			sourceTree = "<group>";
@@ -462,6 +470,7 @@
 				44193EDD13A133A90025300D /* MainWindow.xib in Resources */,
 				4407217113A13AC6002C8B08 /* RootView.xib in Resources */,
 				44C59F7B13A7BA0C00B68DC2 /* BookmarkCell.xib in Resources */,
+				44C59F8513A921BB00B68DC2 /* BookmarkWebView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +514,7 @@
 				447CD21813A534CE00AE457C /* Bookmark.m in Sources */,
 				447CD21B13A53AC900AE457C /* DetailViewController.m in Sources */,
 				44C59F7A13A7BA0C00B68DC2 /* BookmarkCell.m in Sources */,
+				44C59F8413A921BB00B68DC2 /* BookmarkWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "RecentBookmarksController.h"
 #import "RootViewController.h"
+#import "BookmarkWebViewController.h"
 #import "BookmarkCell.h"
 
 @interface RecentBookmarksController (Private)
@@ -76,6 +77,7 @@
 	NSLog(@"Hit error: %@", error);
 }
 
+#pragma mark -
 #pragma mark UITableViewDataSource methods
 
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section {
@@ -124,6 +126,19 @@
     [tagLabelText release];
     
 	return cell;
+}
+
+#pragma mark -
+#pragma mark Table delegate methods
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BookmarkWebViewController *view = [[BookmarkWebViewController alloc] init];
+    
+    view.URL = [[_bookmarks objectAtIndex:indexPath.row] url];
+    
+    [self.navigationController pushViewController:view animated:true];
+    [view release];
 }
 
 #pragma mark -
