@@ -11,8 +11,10 @@
 
 @interface BookmarkWebViewController : UIViewController {
     NSURL *URL;
+    IBOutlet UIWebView *webView;
 }
 
 @property (nonatomic, retain) NSURL *URL;
+@property (nonatomic, retain) UIWebView *webView;
 
 @end

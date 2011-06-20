@@ -133,12 +133,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BookmarkWebViewController *view = [[BookmarkWebViewController alloc] init];
+    BookmarkWebViewController *controller = [[BookmarkWebViewController alloc] init];
     
-    view.URL = [[_bookmarks objectAtIndex:indexPath.row] url];
+    controller.URL = [[_bookmarks objectAtIndex:indexPath.row] url];
     
-    [self.navigationController pushViewController:view animated:true];
-    [view release];
+    //[self.navigationController pushViewController:view animated:true];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc]
+                                                    initWithRootViewController:controller];
+    
+    navigationController.navigationBar.hidden = YES;
+    
+    [self presentModalViewController:navigationController animated:YES];
+    
+    [controller release];
 }
 
 #pragma mark -

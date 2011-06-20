@@ -12,9 +12,12 @@
 @implementation BookmarkWebViewController
 
 @synthesize URL;
+@synthesize webView;
 
 - (void)dealloc
 {
+    [webView release];
+    
     [super dealloc];
 }
 
@@ -36,20 +39,23 @@
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:self.URL];
     
     //Load the request in the UIWebView.
-    [(UIWebView *)self.view loadRequest:requestObj];
+    [self.webView loadRequest:requestObj];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    self.webView = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
 	return YES;
+}
+
+- (IBAction)dismissView:(id)sender {
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end
