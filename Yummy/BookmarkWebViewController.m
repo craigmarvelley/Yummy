@@ -13,10 +13,13 @@
 
 @synthesize URL;
 @synthesize webView;
+@synthesize menuButton;
 
 - (void)dealloc
 {
+    [URL release];
     [webView release];
+    [menuButton release];
     
     [super dealloc];
 }
@@ -46,6 +49,7 @@
 {
     [super viewDidUnload];
     self.webView = nil;
+    self.menuButton = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -56,6 +60,28 @@
 
 - (IBAction)dismissView:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
+}
+
+#pragma mark -
+#pragma mark Popover handling
+
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    self.menuButton.enabled = YES;
+}
+
+- (IBAction)presentOptionPopover:(id)sender {
+    
+    self.menuButton.enabled = NO;
+    
+    UIViewController *controller = [[UIViewController alloc] init];
+    UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController:controller];
+    
+    popover.delegate = self;
+    
+    [popover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+    
+    [controller release];
+    
 }
 
 @end

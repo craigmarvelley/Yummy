@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 
 
-@interface BookmarkWebViewController : UIViewController {
+@interface BookmarkWebViewController : UIViewController <UIPopoverControllerDelegate> {
     NSURL *URL;
     IBOutlet UIWebView *webView;
+    IBOutlet UIBarItem *menuButton;
 }
 
 @property (nonatomic, retain) NSURL *URL;
 @property (nonatomic, retain) UIWebView *webView;
+@property (nonatomic, retain) UIBarItem *menuButton;
 
 @end
