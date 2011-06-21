@@ -14,12 +14,14 @@
 @synthesize URL;
 @synthesize webView;
 @synthesize menuButton;
+@synthesize popoverActionSheet;
 
 - (void)dealloc
 {
     [URL release];
     [webView release];
     [menuButton release];
+    [popoverActionSheet release];
     
     [super dealloc];
 }
@@ -54,34 +56,102 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
 	return YES;
 }
 
-- (IBAction)dismissView:(id)sender {
+#pragma mark -
+#pragma mark Action methods
+
+- (void)openBookmarkInSafari
+{
+    [[UIApplication sharedApplication] openURL:self.URL];
+}
+
+#pragma mark Mail compose sheet delegate methods
+
+-(void)displayMailComposerSheet
+{
+    MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+    picker.mailComposeDelegate = self;
+    
+    // Set subject
+    [picker setSubject:@"Check out this link!"];
+        
+    // Set body
+    NSString *emailBody = [self.URL absoluteString];
+    [picker setMessageBody:emailBody isHTML:NO];
+    
+    // Present the mail composition interface.
+    [self presentModalViewController:picker animated:YES];
+    
+    [picker release];
+}
+
+// The mail compose view controller delegate method
+- (void)mailComposeController:(MFMailComposeViewController *)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError *)error
+{
     [self dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark -
-#pragma mark Popover handling
-
-- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
-    self.menuButton.enabled = YES;
-}
+#pragma mark Action sheet popover handling
 
 - (IBAction)presentOptionPopover:(id)sender {
     
-    self.menuButton.enabled = NO;
+    //If the actionsheet is visible it is dismissed, if it not visible a new one is created.
+    if ([popoverActionSheet isVisible]) {
+        
+        [popoverActionSheet dismissWithClickedButtonIndex:[popoverActionSheet cancelButtonIndex] animated:YES];
+        return;
+    }
     
-    UIViewController *controller = [[UIViewController alloc] init];
-    UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController:controller];
+    popoverActionSheet = [[UIActionSheet alloc] 
+                          initWithTitle:nil 
+                          delegate:self
+                          cancelButtonTitle:nil
+                          destructiveButtonTitle:nil
+                          otherButtonTitles:@"Open in Safari", @"Tweet link", @"Email link", @"Copy URL", nil];
     
-    popover.delegate = self;
+    [popoverActionSheet showFromBarButtonItem:sender animated:YES];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
     
-    [popover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+    if (buttonIndex == [actionSheet cancelButtonIndex]) 
+    {
+        return;
+    }
     
-    [controller release];
+    switch (buttonIndex) {
+        case 0:
+            [self openBookmarkInSafari];
+            break;
+            
+        case 1:
+            break;
+            
+        case 2:
+            [self displayMailComposerSheet];
+            
+        default:
+            break;
+    }
     
 }
+
+#pragma mark -
+#pragma Done button handling
+
+- (IBAction)dismissView:(id)sender {
+    if([popoverActionSheet isVisible]) {
+        [popoverActionSheet dismissWithClickedButtonIndex:[popoverActionSheet cancelButtonIndex] animated:NO];
+    }
+    
+    [self dismissModalViewControllerAnimated:YES];
+}
+
 
 @end

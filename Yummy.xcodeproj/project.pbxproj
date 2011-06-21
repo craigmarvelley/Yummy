@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4406EEC913B0A0ED00D8F77F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4406EEC813B0A0ED00D8F77F /* MessageUI.framework */; };
 		4407217113A13AC6002C8B08 /* RootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4407217013A13AC6002C8B08 /* RootView.xib */; };
 		44193ECA13A133A90025300D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44193EC913A133A90025300D /* UIKit.framework */; };
 		44193ECC13A133A90025300D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44193ECB13A133A90025300D /* Foundation.framework */; };
@@ -128,6 +129,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4406EEC813B0A0ED00D8F77F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		4407217013A13AC6002C8B08 /* RootView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootView.xib; sourceTree = "<group>"; };
 		44193EC513A133A90025300D /* Yummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44193EC913A133A90025300D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -178,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4406EEC913B0A0ED00D8F77F /* MessageUI.framework in Frameworks */,
 				441C513213A63BB900C5E721 /* libRestKitJSONParserYAJL.a in Frameworks */,
 				447CD20B13A5319E00AE457C /* libRestKitNetwork.a in Frameworks */,
 				447CD20C13A5319E00AE457C /* libRestKitObjectMapping.a in Frameworks */,
@@ -208,6 +211,7 @@
 		44193EBA13A133A90025300D = {
 			isa = PBXGroup;
 			children = (
+				4406EEC813B0A0ED00D8F77F /* MessageUI.framework */,
 				447CD27D13A56F8200AE457C /* RestKit.xcodeproj */,
 				44193ECF13A133A90025300D /* Yummy */,
 				44193EF213A133AA0025300D /* YummyTests */,
