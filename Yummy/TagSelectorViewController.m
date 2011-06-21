@@ -20,7 +20,7 @@
         _tags = tagArray;
     }
     
-    self.contentSizeForViewInPopover = CGSizeMake(200, 300);
+    self.contentSizeForViewInPopover = CGSizeMake(200, [tagArray count] * 44);
     
     return self;
 }
@@ -45,11 +45,7 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.title = @"Tags";
 }
 
 - (void)viewDidUnload

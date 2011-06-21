@@ -15,4 +15,6 @@
 
 @property (nonatomic, retain) NSArray *tags;
 
+- (id)initWithTags:(NSArray *)tags;
+
 @end

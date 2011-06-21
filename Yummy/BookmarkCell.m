@@ -26,13 +26,14 @@
 
 - (IBAction)tagsTouched:(id)sender
 {
-    TagSelectorViewController *tagsTable = [[TagSelectorViewController alloc] init];
-    tagsTable.tags = self.tags;
+    TagSelectorViewController *tagsController = [[TagSelectorViewController alloc] initWithTags:self.tags];
+    UINavigationController *container = [[UINavigationController alloc] initWithRootViewController:tagsController];
     
-    UIPopoverController *popoverController = [[UIPopoverController alloc] initWithContentViewController:tagsTable];
-    [popoverController presentPopoverFromRect:[sender bounds] inView:sender permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+    UIPopoverController *popoverController = [[UIPopoverController alloc] initWithContentViewController:container];
+    [popoverController presentPopoverFromRect:[sender bounds] inView:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
     
-    [tagsTable release];
+    [tagsController release];
+    [container release];
 }
 
 @end
