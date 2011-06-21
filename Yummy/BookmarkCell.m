@@ -7,17 +7,32 @@
 //
 
 #import "BookmarkCell.h"
+#import "TagSelectorViewController.h"
 
 
 @implementation BookmarkCell
 
-@synthesize titleLabel, tagsLabel;
+@synthesize tags, titleLabel, tagsLabel, tagsButton;
 
 - (void)dealloc
 {
+    [tags release];
     [titleLabel release];
     [tagsLabel release];
+    [tagsButton release];
     
     [super dealloc];
 }
+
+- (IBAction)tagsTouched:(id)sender
+{
+    TagSelectorViewController *tagsTable = [[TagSelectorViewController alloc] init];
+    tagsTable.tags = self.tags;
+    
+    UIPopoverController *popoverController = [[UIPopoverController alloc] initWithContentViewController:tagsTable];
+    [popoverController presentPopoverFromRect:[sender bounds] inView:sender permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+    
+    [tagsTable release];
+}
+
 @end

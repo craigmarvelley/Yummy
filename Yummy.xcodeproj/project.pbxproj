@@ -35,11 +35,12 @@
 		447CD21813A534CE00AE457C /* Bookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 447CD21713A534CE00AE457C /* Bookmark.m */; };
 		447CD21B13A53AC900AE457C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447CD21A13A53AC900AE457C /* DetailViewController.m */; };
 		44C59F7A13A7BA0C00B68DC2 /* BookmarkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C59F7813A7BA0C00B68DC2 /* BookmarkCell.m */; };
-		44C59F7B13A7BA0C00B68DC2 /* BookmarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44C59F7913A7BA0C00B68DC2 /* BookmarkCell.xib */; };
 		44C59F8413A921BB00B68DC2 /* BookmarkWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C59F8213A921BB00B68DC2 /* BookmarkWebViewController.m */; };
 		44C59F8513A921BB00B68DC2 /* BookmarkWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44C59F8313A921BB00B68DC2 /* BookmarkWebView.xib */; };
 		44DD583913B0C15300009437 /* libRestKitJSONParserYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DD583813B0C15300009437 /* libRestKitJSONParserYAJL.a */; };
 		44DD583C13B0C38200009437 /* RecentBookmarksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD583B13B0C38200009437 /* RecentBookmarksViewController.m */; };
+		44DD584113B0CD9C00009437 /* TagSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD584013B0CD9C00009437 /* TagSelectorViewController.m */; };
+		44DD584313B0D45500009437 /* BookmarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44DD584213B0D45500009437 /* BookmarkCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,13 +170,15 @@
 		447CD27D13A56F8200AE457C /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		44C59F7713A7BA0C00B68DC2 /* BookmarkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkCell.h; sourceTree = "<group>"; };
 		44C59F7813A7BA0C00B68DC2 /* BookmarkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkCell.m; sourceTree = "<group>"; };
-		44C59F7913A7BA0C00B68DC2 /* BookmarkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkCell.xib; sourceTree = "<group>"; };
 		44C59F8113A921BB00B68DC2 /* BookmarkWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkWebViewController.h; sourceTree = "<group>"; };
 		44C59F8213A921BB00B68DC2 /* BookmarkWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkWebViewController.m; sourceTree = "<group>"; };
 		44C59F8313A921BB00B68DC2 /* BookmarkWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkWebView.xib; sourceTree = "<group>"; };
 		44DD583813B0C15300009437 /* libRestKitJSONParserYAJL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRestKitJSONParserYAJL.a; sourceTree = SOURCE_ROOT; };
 		44DD583A13B0C38200009437 /* RecentBookmarksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentBookmarksViewController.h; sourceTree = "<group>"; };
 		44DD583B13B0C38200009437 /* RecentBookmarksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentBookmarksViewController.m; sourceTree = "<group>"; };
+		44DD583F13B0CD9C00009437 /* TagSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagSelectorViewController.h; sourceTree = "<group>"; };
+		44DD584013B0CD9C00009437 /* TagSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagSelectorViewController.m; sourceTree = "<group>"; };
+		44DD584213B0D45500009437 /* BookmarkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,7 +266,7 @@
 				447CD21713A534CE00AE457C /* Bookmark.m */,
 				44C59F7713A7BA0C00B68DC2 /* BookmarkCell.h */,
 				44C59F7813A7BA0C00B68DC2 /* BookmarkCell.m */,
-				44C59F7913A7BA0C00B68DC2 /* BookmarkCell.xib */,
+				44DD584213B0D45500009437 /* BookmarkCell.xib */,
 			);
 			path = Yummy;
 			sourceTree = "<group>";
@@ -329,6 +332,8 @@
 				44C59F8313A921BB00B68DC2 /* BookmarkWebView.xib */,
 				44193F0713A134620025300D /* BookmarkFeedViewController.h */,
 				44193F0813A134620025300D /* BookmarkFeedViewController.m */,
+				44DD583F13B0CD9C00009437 /* TagSelectorViewController.h */,
+				44DD584013B0CD9C00009437 /* TagSelectorViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -494,8 +499,8 @@
 				44193ED413A133A90025300D /* InfoPlist.strings in Resources */,
 				44193EDD13A133A90025300D /* MainWindow.xib in Resources */,
 				4407217113A13AC6002C8B08 /* RootView.xib in Resources */,
-				44C59F7B13A7BA0C00B68DC2 /* BookmarkCell.xib in Resources */,
 				44C59F8513A921BB00B68DC2 /* BookmarkWebView.xib in Resources */,
+				44DD584313B0D45500009437 /* BookmarkCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +546,7 @@
 				44C59F7A13A7BA0C00B68DC2 /* BookmarkCell.m in Sources */,
 				44C59F8413A921BB00B68DC2 /* BookmarkWebViewController.m in Sources */,
 				44DD583C13B0C38200009437 /* RecentBookmarksViewController.m in Sources */,
+				44DD584113B0CD9C00009437 /* TagSelectorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

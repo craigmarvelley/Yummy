@@ -104,8 +104,8 @@
 #pragma mark -
 #pragma mark Action sheet popover handling
 
-- (IBAction)presentOptionPopover:(id)sender {
-    
+- (IBAction)presentOptionPopover:(id)sender 
+{    
     //If the actionsheet is visible it is dismissed, if it not visible a new one is created.
     if ([popoverActionSheet isVisible]) {
         

@@ -10,11 +10,17 @@
 
 
 @interface BookmarkCell : UITableViewCell {
+    NSArray *tags;
     IBOutlet UILabel *titleLabel;
     IBOutlet UILabel *tagsLabel;
+    IBOutlet UIButton *tagsButton;
 }
 
+@property (nonatomic, retain) NSArray *tags;
 @property (nonatomic, retain) IBOutlet UILabel *titleLabel;
 @property (nonatomic, retain) IBOutlet UILabel *tagsLabel;
+@property (nonatomic, retain) IBOutlet UIButton *tagsButton;
+
+- (IBAction)tagsTouched:(id)sender;
 
 @end

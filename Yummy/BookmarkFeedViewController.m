@@ -124,6 +124,16 @@
         }
     }
     
+    cell.tags = tags;
+    
+    // Size the label and button so the text fits exactly
+    CGSize sizeToMakeLabel = [tagLabelText sizeWithFont:cell.tagsLabel.font]; 
+    CGRect frame = CGRectMake(cell.tagsLabel.frame.origin.x, cell.tagsLabel.frame.origin.y, 
+                             sizeToMakeLabel.width, sizeToMakeLabel.height); 
+    
+    cell.tagsLabel.frame = frame;
+    cell.tagsButton.frame = frame;
+    
     cell.tagsLabel.text = tagLabelText;
     
     [tagLabelText release];
