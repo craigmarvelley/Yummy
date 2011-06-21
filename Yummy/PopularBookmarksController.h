@@ -8,17 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-#import "YummyAppDelegate.h"
+#import "BookmarkFeedViewController.h";
 
-@interface PopularBookmarksController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate> 
+@interface PopularBookmarksController : BookmarkFeedViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate> 
 {
-    UIPopoverController *popoverController;
-	YummyAppDelegate *appDelegate;
+
 }
-
-@property (nonatomic, assign) YummyAppDelegate *appDelegate;
-@property (nonatomic, assign) UIPopoverController *popoverController;
-
 
 @end
 

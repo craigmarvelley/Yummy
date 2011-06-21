@@ -8,7 +8,6 @@
 
 #import "RootViewController.h"
 
-#import "RecentBookmarksController.h"
 #import "PopularBookmarksController.h"
 
 @implementation RootViewController
@@ -265,10 +264,10 @@
     {
         if (row == 0) 
         {
-            RecentBookmarksController *controller = [[RecentBookmarksController alloc] init];
-            [viewControllerArray addObject:controller];
-            
-            self.appDelegate.splitViewController.delegate = controller;
+//            RecentBookmarksController *controller = [[RecentBookmarksController alloc] init];
+//            [viewControllerArray addObject:controller];
+//            
+//            self.appDelegate.splitViewController.delegate = controller;
         }
         else if (row == 1) 
         {

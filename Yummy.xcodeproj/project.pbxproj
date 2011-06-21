@@ -24,8 +24,7 @@
 		44193EFA13A133AA0025300D /* YummyTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 44193EF913A133AA0025300D /* YummyTests.h */; };
 		44193EFC13A133AA0025300D /* YummyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44193EFB13A133AA0025300D /* YummyTests.m */; };
 		44193F0913A134620025300D /* PopularBookmarksController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44193F0613A134620025300D /* PopularBookmarksController.m */; };
-		44193F0A13A134620025300D /* RecentBookmarksController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44193F0813A134620025300D /* RecentBookmarksController.m */; };
-		441C513213A63BB900C5E721 /* libRestKitJSONParserYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 441C513113A63BB900C5E721 /* libRestKitJSONParserYAJL.a */; };
+		44193F0A13A134620025300D /* BookmarkFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44193F0813A134620025300D /* BookmarkFeedViewController.m */; };
 		447CD20B13A5319E00AE457C /* libRestKitNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 447CD20613A5319E00AE457C /* libRestKitNetwork.a */; };
 		447CD20C13A5319E00AE457C /* libRestKitObjectMapping.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 447CD20713A5319E00AE457C /* libRestKitObjectMapping.a */; };
 		447CD20D13A5319E00AE457C /* libRestKitSupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 447CD20813A5319E00AE457C /* libRestKitSupport.a */; };
@@ -39,6 +38,7 @@
 		44C59F7B13A7BA0C00B68DC2 /* BookmarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44C59F7913A7BA0C00B68DC2 /* BookmarkCell.xib */; };
 		44C59F8413A921BB00B68DC2 /* BookmarkWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C59F8213A921BB00B68DC2 /* BookmarkWebViewController.m */; };
 		44C59F8513A921BB00B68DC2 /* BookmarkWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44C59F8313A921BB00B68DC2 /* BookmarkWebView.xib */; };
+		44DD583913B0C15300009437 /* libRestKitJSONParserYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DD583813B0C15300009437 /* libRestKitJSONParserYAJL.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,9 +152,8 @@
 		44193EFB13A133AA0025300D /* YummyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YummyTests.m; sourceTree = "<group>"; };
 		44193F0513A134620025300D /* PopularBookmarksController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularBookmarksController.h; sourceTree = "<group>"; };
 		44193F0613A134620025300D /* PopularBookmarksController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularBookmarksController.m; sourceTree = "<group>"; };
-		44193F0713A134620025300D /* RecentBookmarksController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentBookmarksController.h; sourceTree = "<group>"; };
-		44193F0813A134620025300D /* RecentBookmarksController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentBookmarksController.m; sourceTree = "<group>"; };
-		441C513113A63BB900C5E721 /* libRestKitJSONParserYAJL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRestKitJSONParserYAJL.a; sourceTree = SOURCE_ROOT; };
+		44193F0713A134620025300D /* BookmarkFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkFeedViewController.h; sourceTree = "<group>"; };
+		44193F0813A134620025300D /* BookmarkFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkFeedViewController.m; sourceTree = "<group>"; };
 		447CD20613A5319E00AE457C /* libRestKitNetwork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRestKitNetwork.a; sourceTree = SOURCE_ROOT; };
 		447CD20713A5319E00AE457C /* libRestKitObjectMapping.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRestKitObjectMapping.a; sourceTree = SOURCE_ROOT; };
 		447CD20813A5319E00AE457C /* libRestKitSupport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRestKitSupport.a; sourceTree = SOURCE_ROOT; };
@@ -173,6 +172,7 @@
 		44C59F8113A921BB00B68DC2 /* BookmarkWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkWebViewController.h; sourceTree = "<group>"; };
 		44C59F8213A921BB00B68DC2 /* BookmarkWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkWebViewController.m; sourceTree = "<group>"; };
 		44C59F8313A921BB00B68DC2 /* BookmarkWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkWebView.xib; sourceTree = "<group>"; };
+		44DD583813B0C15300009437 /* libRestKitJSONParserYAJL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRestKitJSONParserYAJL.a; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,8 +180,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44DD583913B0C15300009437 /* libRestKitJSONParserYAJL.a in Frameworks */,
 				4406EEC913B0A0ED00D8F77F /* MessageUI.framework in Frameworks */,
-				441C513213A63BB900C5E721 /* libRestKitJSONParserYAJL.a in Frameworks */,
 				447CD20B13A5319E00AE457C /* libRestKitNetwork.a in Frameworks */,
 				447CD20C13A5319E00AE457C /* libRestKitObjectMapping.a in Frameworks */,
 				447CD20D13A5319E00AE457C /* libRestKitSupport.a in Frameworks */,
@@ -211,7 +211,6 @@
 		44193EBA13A133A90025300D = {
 			isa = PBXGroup;
 			children = (
-				4406EEC813B0A0ED00D8F77F /* MessageUI.framework */,
 				447CD27D13A56F8200AE457C /* RestKit.xcodeproj */,
 				44193ECF13A133A90025300D /* Yummy */,
 				44193EF213A133AA0025300D /* YummyTests */,
@@ -232,8 +231,9 @@
 		44193EC813A133A90025300D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				441C513113A63BB900C5E721 /* libRestKitJSONParserYAJL.a */,
+				4406EEC813B0A0ED00D8F77F /* MessageUI.framework */,
 				447CD20613A5319E00AE457C /* libRestKitNetwork.a */,
+				44DD583813B0C15300009437 /* libRestKitJSONParserYAJL.a */,
 				447CD20713A5319E00AE457C /* libRestKitObjectMapping.a */,
 				447CD20813A5319E00AE457C /* libRestKitSupport.a */,
 				447CD20E13A5319E00AE457C /* CFNetwork.framework */,
@@ -252,8 +252,8 @@
 			children = (
 				44193F0513A134620025300D /* PopularBookmarksController.h */,
 				44193F0613A134620025300D /* PopularBookmarksController.m */,
-				44193F0713A134620025300D /* RecentBookmarksController.h */,
-				44193F0813A134620025300D /* RecentBookmarksController.m */,
+				44193F0713A134620025300D /* BookmarkFeedViewController.h */,
+				44193F0813A134620025300D /* BookmarkFeedViewController.m */,
 				44193ED813A133A90025300D /* YummyAppDelegate.h */,
 				44193ED913A133A90025300D /* YummyAppDelegate.m */,
 				44193EDB13A133A90025300D /* MainWindow.xib */,
@@ -514,7 +514,7 @@
 				44193EDA13A133A90025300D /* YummyAppDelegate.m in Sources */,
 				44193EE613A133A90025300D /* RootViewController.m in Sources */,
 				44193F0913A134620025300D /* PopularBookmarksController.m in Sources */,
-				44193F0A13A134620025300D /* RecentBookmarksController.m in Sources */,
+				44193F0A13A134620025300D /* BookmarkFeedViewController.m in Sources */,
 				447CD21813A534CE00AE457C /* Bookmark.m in Sources */,
 				447CD21B13A53AC900AE457C /* DetailViewController.m in Sources */,
 				44C59F7A13A7BA0C00B68DC2 /* BookmarkCell.m in Sources */,
@@ -589,6 +589,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "";
 				"LIBRARY_SEARCH_PATHS[arch=*]" = "\"$(SOURCE_ROOT)/RestKit/Build/$(BUILD_STYLE)-$(PLATFORM_NAME)\"";
+				MACOSX_DEPLOYMENT_TARGET = "";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -610,6 +611,7 @@
 				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build/$(BUILD_STYLE)-$(PLATFORM_NAME)\"";
+				MACOSX_DEPLOYMENT_TARGET = "";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
 					"-ObjC",

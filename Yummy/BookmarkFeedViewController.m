@@ -1,21 +1,25 @@
 //
-//  RecentBookmarksController.m
+//  BookmarkFeedViewController.m
 //  Yummy
 //
 //  Created by Craig on 31/05/2011.
 //  Copyright 2011 Box UK. All rights reserved.
 //
 
-#import "RecentBookmarksController.h"
+#import "BookmarkFeedViewController.h"
 #import "RootViewController.h"
 #import "BookmarkWebViewController.h"
 #import "BookmarkCell.h"
 
-@interface RecentBookmarksController (Private)
+@interface BookmarkFeedViewController (Private)
     - (void)loadBookmarks;
 @end
 
-@implementation RecentBookmarksController
+@implementation BookmarkFeedViewController
+
+@synthesize bookmarkTableView = _bookmarkTableView;
+@synthesize bookmarks = _bookmarks;
+@synthesize feedUrl = _feedUrl;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -29,15 +33,12 @@
 {
     [super loadView];
     
-	// Setup View and Table View	
-	self.title = @"Recent Bookmarks";
-    
-	_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) style:UITableViewStylePlain];
-	_tableView.dataSource = self;
-	_tableView.delegate = self;	
-    _tableView.rowHeight = 60;
+	_bookmarkTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) style:UITableViewStylePlain];
+	_bookmarkTableView.dataSource = self;
+	_bookmarkTableView.delegate = self;	
+    _bookmarkTableView.rowHeight = 60;
 	
-    self.view = _tableView;
+    self.view = _bookmarkTableView;
     
 	[self loadBookmarks];
 }
@@ -55,7 +56,9 @@
         bookmarkMapping = [objectManager.mappingProvider objectMappingForKeyPath:@"bookmark"];
     }
     
-    [objectManager loadObjectsAtResourcePath:@"/" objectMapping:bookmarkMapping delegate:self];
+    NSString *path = [self.feedUrl relativePath];
+    
+    [objectManager loadObjectsAtResourcePath:path objectMapping:bookmarkMapping delegate:self];
 }
 
 #pragma mark RKObjectLoaderDelegate methods
@@ -68,7 +71,7 @@
 	NSLog(@"Loaded bookmarks: %@", objects);    
 	[_bookmarks release];
 	_bookmarks = [objects retain];
-	[_tableView reloadData];
+	[_bookmarkTableView reloadData];
 }
 
 - (void)objectLoader:(RKObjectLoader*)objectLoader didFailWithError:(NSError*)error {
@@ -154,8 +157,9 @@
 
 - (void)dealloc 
 {
-    [_tableView release];
+    [_bookmarkTableView release];
     [_bookmarks release];
+    [_feedUrl release];
     
     [super dealloc];
 }
