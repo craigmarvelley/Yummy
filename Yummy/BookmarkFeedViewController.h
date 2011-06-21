@@ -12,7 +12,8 @@
 #import "DetailViewController.h"
 #import "Bookmark.h"
 
-@interface BookmarkFeedViewController : DetailViewController <UITableViewDelegate, UITableViewDataSource, RKObjectLoaderDelegate>
+@interface BookmarkFeedViewController : DetailViewController <UITableViewDelegate, UITableViewDataSource, RKObjectLoaderDelegate,
+ UIPopoverControllerDelegate>
 {
     UITableView *bookmarkTableView;
 	NSArray *bookmarks;

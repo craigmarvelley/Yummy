@@ -11,7 +11,7 @@
 
 #import "YummyAppDelegate.h"
 #import "RootViewController.h"
-#import "PopularBookmarksController.h"
+#import "RecentBookmarksViewController.h"
 #import "Bookmark.h"
 
 @interface YummyAppDelegate (Private) 
@@ -27,7 +27,7 @@
 
 @synthesize rootViewController=_rootViewController;
 
-@synthesize popularBookmarksController=_popularBookmarksController;
+@synthesize defaultDetailController=_defaultDetailController;
 
 @synthesize rootPopoverButtonItem;
 
@@ -39,13 +39,13 @@
     // Add the split view controller's view to the window and display.
     self.splitViewController =[[UISplitViewController alloc] init];
 	self.rootViewController=[[RootViewController alloc] init];
-	self.popularBookmarksController=[[PopularBookmarksController alloc] init];
+	self.defaultDetailController=[[RecentBookmarksViewController alloc] init];
     
 	UINavigationController *rootNav=[[UINavigationController alloc]initWithRootViewController:self.rootViewController];
-    UINavigationController *detailNav=[[UINavigationController alloc]initWithRootViewController:self.popularBookmarksController];
+    UINavigationController *detailNav=[[UINavigationController alloc]initWithRootViewController:self.defaultDetailController];
     
 	self.splitViewController.viewControllers=[NSArray arrayWithObjects:rootNav,detailNav,nil];
-	self.splitViewController.delegate=self.popularBookmarksController;
+	self.splitViewController.delegate=self.defaultDetailController;
     
     [rootNav release];
     [detailNav release];
@@ -83,7 +83,7 @@
     [_window release];
     [_splitViewController release];
     [_rootViewController release];
-    [_popularBookmarksController release];
+    [_defaultDetailController release];
     [rootPopoverButtonItem release];
     [super dealloc];
 }

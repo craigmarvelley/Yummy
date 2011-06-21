@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "BookmarkFeedViewController.h";
+#import "BookmarkFeedViewController.h"
 
-@interface PopularBookmarksController : BookmarkFeedViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate> 
+@interface PopularBookmarksViewController : BookmarkFeedViewController
 {
 
 }

@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @class YummyAppDelegate;
-@class RecentBookmarksController;
+@class PopularBookmarksViewController;
+@class RecentBookmarksViewController;
 
 @interface RootViewController : UIViewController <UITextFieldDelegate> 
 {    

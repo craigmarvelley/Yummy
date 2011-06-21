@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class RootViewController;
-@class PopularBookmarksController;
+@class RecentBookmarksViewController;
 
 @interface YummyAppDelegate : NSObject <UIApplicationDelegate> {
     
@@ -18,7 +18,7 @@
     UISplitViewController *splitViewController;
     
     RootViewController *rootViewController;
-    PopularBookmarksController *popularBookmarksController;
+    RecentBookmarksViewController *defaultDetailController;
 	UIBarButtonItem *rootPopoverButtonItem;
     
 }
@@ -27,7 +27,7 @@
 
 @property (nonatomic, retain)  UISplitViewController *splitViewController;
 @property (nonatomic, retain)  RootViewController *rootViewController;
-@property (nonatomic, retain)  PopularBookmarksController *popularBookmarksController;
+@property (nonatomic, retain)  RecentBookmarksViewController *defaultDetailController;
 @property (nonatomic, assign)  UIBarButtonItem *rootPopoverButtonItem;
 
 @end

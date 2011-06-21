@@ -6,10 +6,10 @@
 //  Copyright 2011 Box UK. All rights reserved.
 //
 
-#import "PopularBookmarksController.h"
+#import "PopularBookmarksViewController.h"
 #import "RootViewController.h"
 
-@implementation PopularBookmarksController
+@implementation PopularBookmarksViewController
 
 - (void)loadView 
 {
