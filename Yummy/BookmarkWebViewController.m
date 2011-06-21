@@ -67,6 +67,12 @@
     [[UIApplication sharedApplication] openURL:self.URL];
 }
 
+- (void)copyURLToClipboard
+{
+    UIPasteboard *gpBoard = [UIPasteboard generalPasteboard];
+    gpBoard.string = [self.URL absoluteString];
+}
+
 #pragma mark Mail compose sheet delegate methods
 
 -(void)displayMailComposerSheet
@@ -135,6 +141,9 @@
             
         case 2:
             [self displayMailComposerSheet];
+        
+        case 3:
+            [self copyURLToClipboard];
             
         default:
             break;
