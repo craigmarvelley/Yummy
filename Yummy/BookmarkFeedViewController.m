@@ -27,6 +27,28 @@
 - (void)viewDidLoad 
 {
     [super viewDidLoad];
+    
+    if (_refreshHeaderView == nil) {
+        
+		EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] 
+                                           initWithFrame:CGRectMake(0.0f, 0.0f - _bookmarkTableView.bounds.size.height, self.view.frame.size.width, _bookmarkTableView.bounds.size.height)];
+		view.delegate = self;
+		[_bookmarkTableView addSubview:view];
+		_refreshHeaderView = view;
+		[view release];
+        
+	}
+    
+	//  update the last update date
+	[_refreshHeaderView refreshLastUpdatedDate];
+}
+
+- (void)viewDidUnload
+{
+    _bookmarkTableView = nil;
+    _bookmarks = nil;
+    _feedUrl = nil;
+    _refreshHeaderView=nil;
 }
 
 - (void)loadView 
@@ -68,10 +90,13 @@
 }
 
 - (void)objectLoader:(RKObjectLoader*)objectLoader didLoadObjects:(NSArray*)objects {
-	NSLog(@"Loaded bookmarks: %@", objects);    
 	[_bookmarks release];
-	_bookmarks = [objects retain];
+	
+    _bookmarks = [objects retain];
+    
 	[_bookmarkTableView reloadData];
+    
+    [self doneLoadingTableViewData];
 }
 
 - (void)objectLoader:(RKObjectLoader*)objectLoader didFailWithError:(NSError*)error {
@@ -150,8 +175,6 @@
     
     controller.URL = [[_bookmarks objectAtIndex:indexPath.row] url];
     
-    //[self.navigationController pushViewController:view animated:true];
-    
     UINavigationController *navigationController = [[UINavigationController alloc]
                                                     initWithRootViewController:controller];
     
@@ -163,6 +186,64 @@
 }
 
 #pragma mark -
+#pragma mark Data Source Loading / Reloading Methods
+
+- (void)reloadTableViewDataSource{
+    
+	_reloading = YES;
+    
+    [self loadBookmarks];
+    
+}
+
+- (void)doneLoadingTableViewData{
+    
+	//  model should call this when its done loading
+	_reloading = NO;
+	[_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:_bookmarkTableView];
+    
+}
+
+
+#pragma mark -
+#pragma mark UIScrollViewDelegate Methods
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{	
+    
+	[_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];
+    
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    
+	[_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
+    
+}
+
+
+#pragma mark -
+#pragma mark EGORefreshTableHeaderDelegate Methods
+
+- (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view{
+    
+	[self reloadTableViewDataSource];
+	
+    
+}
+
+- (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view{
+    
+	return _reloading; // should return if data source model is reloading
+    
+}
+
+- (NSDate*)egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView*)view{
+    
+	return [NSDate date]; // should return date data source was last changed
+    
+}
+
+#pragma mark -
 #pragma mark Memory management
 
 - (void)dealloc 
@@ -170,6 +251,7 @@
     [_bookmarkTableView release];
     [_bookmarks release];
     [_feedUrl release];
+    _refreshHeaderView=nil;
     
     [super dealloc];
 }

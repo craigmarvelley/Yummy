@@ -12,7 +12,7 @@
 
 @implementation BookmarkCell
 
-@synthesize tags, titleLabel, tagsLabel, tagsButton;
+@synthesize tags, titleLabel, tagsLabel, tagsButton, tagsPopover;
 
 - (void)dealloc
 {
@@ -30,10 +30,18 @@
     UINavigationController *container = [[UINavigationController alloc] initWithRootViewController:tagsController];
     
     UIPopoverController *popoverController = [[UIPopoverController alloc] initWithContentViewController:container];
-    [popoverController presentPopoverFromRect:[sender bounds] inView:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    popoverController.delegate = self;
+    self.tagsPopover = popoverController;
     
+    [popoverController presentPopoverFromRect:[sender bounds] inView:sender permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+
     [tagsController release];
     [container release];
+}
+
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    [tagsPopover release];
+    tagsPopover = nil;
 }
 
 @end

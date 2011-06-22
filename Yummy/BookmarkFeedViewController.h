@@ -10,19 +10,25 @@
 #import <RestKit/RestKit.h>
 
 #import "DetailViewController.h"
+#import "EGORefreshTableHeaderView.h"
 #import "Bookmark.h"
 
 @interface BookmarkFeedViewController : DetailViewController <UITableViewDelegate, UITableViewDataSource, RKObjectLoaderDelegate,
- UIPopoverControllerDelegate>
+ UIPopoverControllerDelegate, EGORefreshTableHeaderDelegate>
 {
     UITableView *bookmarkTableView;
 	NSArray *bookmarks;
     NSURL *feedURL;
+    EGORefreshTableHeaderView *_refreshHeaderView;
+    BOOL _reloading;
 }
 
 @property (nonatomic, retain) UITableView *bookmarkTableView;
 @property (nonatomic, retain) NSArray *bookmarks;
 @property (nonatomic, retain) NSURL *feedUrl;
+
+- (void)reloadTableViewDataSource;
+- (void)doneLoadingTableViewData;
 
 @end
 
